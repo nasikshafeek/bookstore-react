@@ -1,14 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Book from "./components/Book/Book";
+import { Container, Row, CardGroup, CardDeck, CardColumns } from "react-bootstrap";
 
 function App() {
-    const description = "Hello there is a nice text"
+  let description = "Hello there is a nice text"
   return (
-    <div className="App">
-      <Book description={description}></Book>
-    </div>
+    <Container fluid="lg">
+      <CardColumns>
+        <Book description={description}></Book>
+        <Book description={description}></Book>
+        <Book description={description}></Book>
+        <Book description={description}></Book>
+        <Book description={description}></Book>
+        <Book description={description}></Book>
+        <Book description={description}></Book>
+        <Book description={description}></Book>
+      </CardColumns>
+    </Container>
   );
 }
 
