@@ -1,14 +1,12 @@
 import React from 'react';
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { isCompositeComponent } from 'react-dom/test-utils';
-import { Link, NavLink } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
 function Header() {
 return  (<Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="dark">
-  <NavLink to="/">
+  <LinkContainer to="/">
     <Navbar.Brand>Kisan's Amazing Bookstore</Navbar.Brand>
-  </NavLink>
+  </LinkContainer>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
