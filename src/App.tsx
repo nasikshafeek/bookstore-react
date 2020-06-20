@@ -3,6 +3,7 @@ import './App.css';
 import Book from "./components/Book/Book";
 import { Container, Row, CardGroup, CardDeck, CardColumns } from "react-bootstrap";
 import Header from './components/Header/Header';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   let description = "Hello there is a nice text"
@@ -10,16 +11,23 @@ function App() {
     <div>
       <Header></Header>
       <Container fluid="lg">
-        <CardColumns>
-          <Book description={description}></Book>
-          <Book description={description}></Book>
-          <Book description={description}></Book>
-          <Book description={description}></Book>
-          <Book description={description}></Book>
-          <Book description={description}></Book>
-          <Book description={description}></Book>
-          <Book description={description}></Book>
-        </CardColumns>
+        <Switch>
+          <Route path="/references">
+            <h1> References </h1>
+          </Route>
+          <Route path="/">
+            <CardColumns>
+              <Book description={description}></Book>
+              <Book description={description}></Book>
+              <Book description={description}></Book>
+              <Book description={description}></Book>
+              <Book description={description}></Book>
+              <Book description={description}></Book>
+              <Book description={description}></Book>
+              <Book description={description}></Book>
+            </CardColumns>
+          </Route>
+        </Switch>
       </Container>
     </div>
   );
