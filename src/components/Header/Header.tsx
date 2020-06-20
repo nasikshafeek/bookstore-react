@@ -16,11 +16,19 @@ return  (<Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="da
         <Nav.Link>References</Nav.Link>
       </LinkContainer>
       <NavDropdown title="Fiction" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#fiction/action">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#fiction/fantasy">Fantasy</NavDropdown.Item>
-        <NavDropdown.Item href="#fiction/romantic">Romantic</NavDropdown.Item>
+        <LinkContainer to="/fiction/action">
+          <NavDropdown.Item>Action</NavDropdown.Item>
+        </LinkContainer>
+        <LinkContainer to="/fiction/fantasy">
+          <NavDropdown.Item>Fantasy</NavDropdown.Item>
+        </LinkContainer>
+        <LinkContainer to="/fiction/romantic">
+          <NavDropdown.Item>Romantic</NavDropdown.Item>
+        </LinkContainer>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#fiction/all">All</NavDropdown.Item>
+        <LinkContainer to="/fiction/all">
+          <NavDropdown.Item>All</NavDropdown.Item>
+        </LinkContainer>
       </NavDropdown>
     </Nav>
   </Navbar.Collapse>
