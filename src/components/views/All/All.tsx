@@ -3,17 +3,13 @@ import { CardColumns } from "react-bootstrap";
 import Book from "../../Book/Book";
 
 function All(params: any) {
-    const description = params.description
+    const books = params.books
+    const bookList = books.map((book: any) => {
+        return (<Book key={book.id} {...book} />)
+    })
     return (
         <CardColumns>
-            <Book description={description}></Book>
-            <Book description={description}></Book>
-            <Book description={description}></Book>
-            <Book description={description}></Book>
-            <Book description={description}></Book>
-            <Book description={description}></Book>
-            <Book description={description}></Book>
-            <Book description={description}></Book>
+            { bookList }
         </CardColumns>
     );
 }
