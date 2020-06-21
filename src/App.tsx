@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Book from "./components/Book/Book";
+import All from "./components/views/All/All";
+import { default as FictionAll } from "./components/views/Fiction/All";
 import { Container, Row, CardGroup, CardDeck, CardColumns } from "react-bootstrap";
 import Header from './components/Header/Header';
 import { Switch, Route } from 'react-router-dom';
@@ -15,20 +16,9 @@ function App() {
           <Route path="/references">
             <h1> References </h1>
           </Route>
-          <Route path="/fiction">
-            <h1> Fiction </h1>
-          </Route>
+          <Route path="/fiction" component={ FictionAll } />
           <Route path="/">
-            <CardColumns>
-              <Book description={description}></Book>
-              <Book description={description}></Book>
-              <Book description={description}></Book>
-              <Book description={description}></Book>
-              <Book description={description}></Book>
-              <Book description={description}></Book>
-              <Book description={description}></Book>
-              <Book description={description}></Book>
-            </CardColumns>
+            <All description="Some description" />
           </Route>
         </Switch>
       </Container>
